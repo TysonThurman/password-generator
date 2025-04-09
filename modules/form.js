@@ -1,13 +1,18 @@
-import React, { Component } from 'react';
+import { useState } from 'react';
 
 export default function InputField() {
+
+    const [password, setPassword] = useState('');
+
+    function handleGenerateButton(){
+        setPassword('Test');
+    }
+
     return (
     <div>
-        <form>
-            <button type='submit'>Generate</button>
-            <br />
-            <input type="text" required size="10" disabled />
-        </form>
+        <button onClick={handleGenerateButton}>Generate</button>
+        <br /> <br />
+        <input type="text" disabled value={password} />
     </div>
     );
 }
