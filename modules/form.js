@@ -11,14 +11,15 @@ export default function InputField() {
         setPassword(generatedString);
     }
 
-    function updateSliderNumber(e) {
-        setPasswordChars(e.target.value);
-        console.log(e.target.value);
-    }
+    // function updateSliderNumber(e) {
+    //     setPasswordChars(e.target.value);
+    //     console.log(e.target.value);
+    // }
 
     return (
     <div>
-        <input onChange={(e) => updateSliderNumber(e)} type="range" min="4" max="16" step="1" />
+        {/* <input onChange={(e) => updateSliderNumber(e)} type="range" min="4" max="16" step="1" />
+        <br /> <br /> */}
         <p>Value: {passwordChars}</p>
         <br /> <br />
         <button onClick={handleGenerateButton}>Generate</button>
